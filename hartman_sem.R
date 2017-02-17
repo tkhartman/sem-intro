@@ -21,7 +21,7 @@
 
 ##' Housekeeping 
 ## Install and load necessary packages using 'pacman'
-install.packages('pacman')  # First installation only
+# install.packages('pacman')  # First installation only (uncomment and run if needed)
 pacman::p_load(haven, lavaan)  # haven loads foreign datasets; lavaan is for SEM
 
 ## Check and set your working directory (Uncomment for your type of computer OS)
@@ -83,9 +83,7 @@ sem1 <- '  # Measurement component
             ab := a*b
             bc := b*c
             abc := a*b*c         
-            
-            # Residuals
-            cempathy ~~ aempathy  
+
         '
 model.sem1 <- sem(sem1,
            data=anes, 
